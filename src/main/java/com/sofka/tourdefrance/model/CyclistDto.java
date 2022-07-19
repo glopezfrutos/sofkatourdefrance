@@ -13,26 +13,26 @@ import javax.validation.constraints.NotNull;
 public class CyclistDto {
     private String id;
 
-    @NotEmpty(message = "First name must not be empty")
+    @NotEmpty(message = "firstName may not be empty")
     private String firstName;
 
-    @NotEmpty(message = "Last name must not be empty")
+    @NotEmpty(message = "lastName may not be empty")
     private String lastName;
 
     @Min(1)
     @Max(999)
-    @NotNull
+    @NotNull(message = "number may not be null")
     private Integer number;
 
-    @NotEmpty
+    @NotEmpty(message = "teamId may not be empty")
     private String teamId;
 
-    @NotEmpty
+    @NotEmpty(message = "teamName may not be empty")
     private String teamName;
 
-    @NotEmpty
+    @NotEmpty(message = "countryId may not be empty")
     private String countryId;
 
-    @NotEmpty
+    @NotEmpty(message = "countryName may not be empty")
     private String countryName;
 }
